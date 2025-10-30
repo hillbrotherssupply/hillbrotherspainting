@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Temporarily Unavailable</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f6f8fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 40px 20px;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+
+    h1 {
+      color: #24292f;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .loader {
+      border: 4px solid #e1e4e8;
+      border-top: 4px solid #0366d6;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .provider {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 30px;
+    }
+
+    .provider a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    .provider a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loader"></div>
+    <h1>We’re performing scheduled maintenance</h1>
+    <p>Our hosting provider is currently applying updates.
+       Please check back shortly — your website will be available again soon.</p>
+    <div class="provider">
+      <p>Hosted by <a href="#">WebNode Services, Inc.</a></p>
+      <p>Status: <span style="color:#0366d6;">Online - Maintenance Mode</span></p>
+    </div>
+  </div>
+</body>
+</html>
