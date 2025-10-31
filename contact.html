@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/optimized/favicon-32x32-6905130c06972.png">
+  <title>Hill Brothers Painting & Contracting, LLC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <p>We'll get back to you as soon as possible.</p>
+    <script type="text/javascript" src="https://form.jotform.com/jsform/253035946984065"></script>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- load components -->
+  <script>
+    const includes = [
+      { file: "header.html",  id: "header-placeholder" },
+      { file: "footer.html",  id: "footer-placeholder" }
+    ];
+    includes.forEach(include => {
+      fetch(include.file)
+        .then(response => {
+          if (!response.ok) throw new Error(`${include.file} not found`);
+          return response.text();
+        })
+        .then(html => {
+          const el = document.getElementById(include.id);
+          if (el) el.innerHTML = html;
+        })
+        .catch(err => console.warn(`❌ Failed to load ${include.file}:`, err));
+    });
+  </script>
+
+</body>
+
+</html>
 
