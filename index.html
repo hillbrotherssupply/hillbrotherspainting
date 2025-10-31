@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
     <div id="header-placeholder"></div>
+
     <section class="intro">
       <div class="carousel">
         <div class="carousel-container">
@@ -64,7 +66,6 @@
         { file: "header.html",  id: "header-placeholder" },
         { file: "footer.html",  id: "footer-placeholder" }
       ];
-
       includes.forEach(include => {
         fetch(include.file)
           .then(response => {
