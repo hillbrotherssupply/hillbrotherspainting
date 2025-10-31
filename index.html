@@ -1,76 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Service Maintenance — WebNode Services, Inc.</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f6f8fa;
-      color: #222;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      height:100vh;
-    }
-    .card {
-      max-width:640px;
-      background:#fff;
-      padding:34px;
-      border-radius:10px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-      text-align:center;
-    }
-    .logo {
-      font-weight:700;
-      color:#0b5cff;
-      font-size:18px;
-      margin-bottom:10px;
-    }
-    h1 { margin:6px 0 10px; font-size:20px;}
-    p { color:#444; line-height:1.5;}
-    .meta { margin-top:18px; color:#666; font-size:0.95em;}
-    .support {
-      margin-top:18px;
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .pill {
-      background:#f1f6ff;
-      color:#0b5cff;
-      border-radius:6px;
-      padding:8px 12px;
-      font-weight:600;
-      font-size:0.95em;
-    }
-    a { color:#0b5cff; text-decoration:none; }
-    small { display:block; color:#999; margin-top:12px; }
-  </style>
-</head>
-<body>
-  <div class="card" role="status" aria-live="polite">
-    <div class="logo">WebNode Services, Inc.</div>
-    <h1>Scheduled Maintenance in Progress</h1>
-    <p>We are currently performing maintenance on our infrastructure which temporarily affects sites hosted on this platform. Your site is temporarily unavailable while our engineers apply updates and validate services.</p>
-
-    <div class="support">
-      <div class="pill">Status: Maintenance</div>
-      <div class="pill">Impact: Intermittent availability</div>
-    </div>
-
-    <div class="meta">
-      For updates visit the provider status page or contact WebNode Support:
-      <div style="margin-top:10px;">
-        <a href="https://status.webnodeservices.io" target="_blank" rel="noopener">status.webnodeservices.io</a>
-        &nbsp;•&nbsp;
-        <a href="mailto:support@webnodeservices.io">support@webnodeservices.io</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hill Brothers Painting & Contracting, LLC</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <section class="intro">
+      <div class="carousel">
+        <div class="carousel-container">
+          <img src="images/optimized/c59aa8-49710723b9554316b19923b65204bd81mv2-6904c0b572c75.jpg" alt="Hill Brothers Project 1" class="current-slide">
+          <img src="images/optimized/c59aa8-8bbc52fa34894fc899b1b9c65852baecmv2-6904c0b5bb83d.jpg" alt="Hill Brothers Project 2">
+          <img src="images/optimized/c59aa8-8a10bf0d66dc4d7e803dc04f62834d55mv2-6904c0b596722.jpg" alt="Hill Brothers Project 3">
+          <img src="images/optimized/c59aa8-63c87c23229b4511a4bfe752ba8437a6mv2-6904c0b3a40d0.jpg" alt="Hill Brothers Project 4">
+          <img src="images/optimized/c59aa8-8e39998cef4241f8aca7fa54b6e8660amv2-6904c0b291174.jpg" alt="Hill Brothers Project 5">
+        </div>
       </div>
-      <small>We appreciate your patience while we complete this work.</small>
-    </div>
-  </div>
-</body>
+    </section>
+
+    <section class="about-us">
+      <div class="about-us-inner">
+        <h2>ABOUT US</h2>
+        <h3>What You Need to Know</h3>
+        <p>Hill Brothers Painting and Contracting has always operated under strong values aimed at exceeding client needs. Our communication channels are always open—our relationship with our clients begins on the first day of contact, and only ends once they’re fully satisfied with our work.</p>
+        <p>Since our business started in 1992 in Merrimack, New Hampshire, quality has been our focus. By working with the best materials in the industry and employing the most experienced and meticulous painters, we are able to deliver solid and long-lasting solutions for everyone.</p>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="services-inner">
+        <h2>OUR SERVICES</h2>
+        <h3>Have a specific project that requires professional attention?</h3>
+        <p>Small projects often turn into large ones at Hill Brothers Painting, all thanks to our satisfied clients. Our wide range of services and commitment to client success have earned us an impeccable reputation in the industry. With personalized options and high quality materials, we’re doing everything we can to keep our clients happy through our work.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-item">
+          <a href="#" title="Hill Brothers Painting Contractors Page">
+            <img src="images/optimized/6fd1af5765ce4b2fb03a72dd932f5c68-6904c032c275b.jpg" alt="Commercial Painting">
+            <h4>COMMERCIAL PAINTING</h4>
+          </a>
+        </div>
+        <div class="service-item">
+          <a href="#" title="Hill Brothers Painting Residential Page">
+            <img src="images/optimized/c59aa8-f28247ed67d04d01b51bd4b0b5c708b0mv2-d-5312-2988-s-4-2-6904e3f9165d2.png" alt="Residential Painting">
+            <h4>RESIDENTIAL PAINTING</h4>
+          </a>
+        </div>
+        <div class="service-item">
+          <img src="images/home/f3bde28a1c8241ad94ca45137e88f9df.jpg" alt="Industrial Painting">
+          <h4>INDUSTRIAL PAINTING</h4>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- load components -->
+    <script>
+      const includes = [
+        { file: "header.html",  id: "header-placeholder" },
+        { file: "footer.html",  id: "footer-placeholder" }
+      ];
+
+      includes.forEach(include => {
+        fetch(include.file)
+          .then(response => {
+            if (!response.ok) throw new Error(`${include.file} not found`);
+            return response.text();
+          })
+          .then(html => {
+            const el = document.getElementById(include.id);
+            if (el) el.innerHTML = html;
+          })
+          .catch(err => console.warn(`❌ Failed to load ${include.file}:`, err));
+      });
+    </script>
+
+    <!-- Carousel Script -->
+    <script>
+      const slides = document.querySelectorAll('.carousel-container img');
+      // const nextBtn = document.querySelector('.carousel .next');
+      // const prevBtn = document.querySelector('.carousel .prev');
+      let current = 0;
+
+      // Ensure the first slide is visible
+      slides[current].classList.add('current-slide');
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('current-slide'));
+        slides[index].classList.add('current-slide');
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+
+      function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      }
+
+      // nextBtn.addEventListener('click', nextSlide);
+      // prevBtn.addEventListener('click', prevSlide);
+      setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- Carousel Height Script -->
+    <script>
+      // Adjust carousel height to tallest image
+      function setCarouselHeight() {
+        const container = document.querySelector('.carousel-container');
+        let maxHeight = 0;
+        document.querySelectorAll('.carousel-container img').forEach(img => {
+          if (img.complete) {
+            maxHeight = Math.max(maxHeight, img.naturalHeight * (container.offsetWidth / img.naturalWidth));
+          } else {
+            img.addEventListener('load', setCarouselHeight);
+          }
+        });
+        container.style.height = maxHeight + 'px';
+      }
+
+      window.addEventListener('load', setCarouselHeight);
+      window.addEventListener('resize', setCarouselHeight);
+    </script>
+
+    <!-- Pause carousel when not visible script -->
+    <script>
+      let carouselInterval;
+      function startCarousel() {
+        carouselInterval = setInterval(nextSlide, 5000);
+      }
+      function stopCarousel() {
+        clearInterval(carouselInterval);
+      }
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopCarousel();
+        else startCarousel();
+      });
+      startCarousel();
+    </script>
+
+  </body>
 </html>
