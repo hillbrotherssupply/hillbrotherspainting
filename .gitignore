@@ -1,0 +1,62 @@
+# === System Files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Node / Frontend Tools ===
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# === Python-related (for scraper/) ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+*.egg
+poetry.lock
+
+# === Editors / IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# === OS and temporary ===
+*.tmp
+*.temp
+*.bak
+*.old
+
+# === Deployment / CI Artifacts ===
+*.tar
+*.zip
+*.gz
+*.rar
+*.7z
+
+# === Image optimization / cache directories ===
+images/optimized/
+images/favicon/*.bak
+
+# === Logs / reports ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# === Other ===
+# Ignore local test HTML files or drafts (optional)
+*_test.html
+drafts/
+
+# === Keep necessary files ===
+!CNAME

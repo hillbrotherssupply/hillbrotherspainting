@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/optimized/favicon-32x32-6905130c06972.png">
     <title>Hill Brothers Painting & Contracting, LLC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
 
@@ -60,53 +65,26 @@
 
     <div id="footer-placeholder"></div>
 
-    <!-- load components -->
-    <script>
-      const includes = [
-        { file: "header.html",  id: "header-placeholder" },
-        { file: "footer.html",  id: "footer-placeholder" }
-      ];
-      includes.forEach(include => {
-        fetch(include.file)
-          .then(response => {
-            if (!response.ok) throw new Error(`${include.file} not found`);
-            return response.text();
-          })
-          .then(html => {
-            const el = document.getElementById(include.id);
-            if (el) el.innerHTML = html;
-          })
-          .catch(err => console.warn(`❌ Failed to load ${include.file}:`, err));
-      });
-    </script>
+    <script src="js/scripts.js"></script>
 
     <!-- Carousel Script -->
     <script>
       const slides = document.querySelectorAll('.carousel-container img');
-      // const nextBtn = document.querySelector('.carousel .next');
-      // const prevBtn = document.querySelector('.carousel .prev');
       let current = 0;
-
       // Ensure the first slide is visible
       slides[current].classList.add('current-slide');
-
       function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('current-slide'));
         slides[index].classList.add('current-slide');
       }
-
       function nextSlide() {
         current = (current + 1) % slides.length;
         showSlide(current);
       }
-
       function prevSlide() {
         current = (current - 1 + slides.length) % slides.length;
         showSlide(current);
       }
-
-      // nextBtn.addEventListener('click', nextSlide);
-      // prevBtn.addEventListener('click', prevSlide);
       setInterval(nextSlide, 5000);
     </script>
 
@@ -125,7 +103,6 @@
         });
         container.style.height = maxHeight + 'px';
       }
-
       window.addEventListener('load', setCarouselHeight);
       window.addEventListener('resize', setCarouselHeight);
     </script>
@@ -145,6 +122,5 @@
       });
       startCarousel();
     </script>
-
   </body>
 </html>
