@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
 
   <div id="header-placeholder"></div>
@@ -24,25 +25,7 @@
 
   <div id="footer-placeholder"></div>
 
-  <!-- load components -->
-  <script>
-    const includes = [
-      { file: "header.html",  id: "header-placeholder" },
-      { file: "footer.html",  id: "footer-placeholder" }
-    ];
-    includes.forEach(include => {
-      fetch(include.file)
-        .then(response => {
-          if (!response.ok) throw new Error(`${include.file} not found`);
-          return response.text();
-        })
-        .then(html => {
-          const el = document.getElementById(include.id);
-          if (el) el.innerHTML = html;
-        })
-        .catch(err => console.warn(`❌ Failed to load ${include.file}:`, err));
-    });
-  </script>
+  <script src="js/scripts.js"></script>
 
 </body>
 

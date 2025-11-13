@@ -44,6 +44,18 @@ function initNavMenu() {
 }
 
 // ---- Highlight Active Nav Link ----
+// function highlightActiveLink() {
+//   const links = document.querySelectorAll(".nav-link");
+//   const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+//   links.forEach(link => {
+//     const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
+//     if (linkPage === currentPage) link.classList.add("active");
+//     if ((currentPage === "" || currentPage === "index.html") && linkPage === "index.html")
+//       link.classList.add("active");
+//   });
+// }
+// ---- Highlight Active Nav Link ----
 function highlightActiveLink() {
   const links = document.querySelectorAll(".nav-link");
   const currentPage = window.location.pathname.split("/").pop().toLowerCase();
@@ -51,7 +63,7 @@ function highlightActiveLink() {
   links.forEach(link => {
     const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
     if (linkPage === currentPage) link.classList.add("active");
-    if ((currentPage === "" || currentPage === "index.html") && linkPage === "home.html")
+    if ((currentPage === "" || currentPage === "index.html") && linkPage === "index.html")
       link.classList.add("active");
   });
 }
